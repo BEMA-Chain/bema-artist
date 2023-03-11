@@ -6,6 +6,7 @@ import MobileHeader from "../../Header/mobileHeader";
 import Container from "./pagescomponents/artistsComponent/Container";
 import { BsFillPatchCheckFill } from "react-icons/bs";
 import Song from "./pagescomponents/artistsComponent/playlist";
+import { Helmet } from "react-helmet";
 
 const ArtistPage = () => {
   const url = new URL(window.location.href);
@@ -23,10 +24,11 @@ const ArtistPage = () => {
     "He who was",
   ];
 
-  const events = ["Start"];
-
   return (
     <div className="mainContentContainer">
+      <Helmet>
+        <title>{"BEMA - Artist " + artistName}</title>
+      </Helmet>
       <div className="artistpage">
         <div className="headers">
           <Header />

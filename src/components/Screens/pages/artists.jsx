@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import "../pages_styles/artists.scss";
 import Header from "../../Header/Header";
 import MobileHeader from "../../Header/mobileHeader";
@@ -23,6 +24,10 @@ const Artists = () => {
 
   return (
     <div className="mainContentContainer">
+      <Helmet>
+        <title>{"BEMA - Artists"}</title>
+      </Helmet>
+
       <Header />
       <MobileHeader />
       <div className="pop-artists">
